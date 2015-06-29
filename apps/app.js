@@ -18,12 +18,12 @@ function getRequest(searchTerm){
   	url = 'https://www.googleapis.com/youtube/v3/search';
 
   	$.getJSON(url, params, function(data){
-    showResults(data.Search);
+    showResults(data.items);
  	});
 }
 
 // To show results
-function showResults(results){
+function showResults(data.items){
 	var html = "";
 	$.each(results, function(index,value){
 	    html += '<p>' + value.Title + '</p>';
