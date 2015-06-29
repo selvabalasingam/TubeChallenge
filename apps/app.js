@@ -24,10 +24,10 @@ function getRequest(searchTerm){
 
 // To show results
 function showResults(results){
-    var html = "";
-    $.each(results, function(index,value){
-        html += '<p>' + value.Title + '</p>';
-        console.log(value.Title);
-    });
-    $('#search-results').html(html);
-    }
+   var html = "";
+   $.each(results, function(index,value){
+       html += '<p>' + value.snippet.title + '</p>';
+       console.log(value.snippet.title);
+   });
+   $('#search-results').html(html);
+   }
